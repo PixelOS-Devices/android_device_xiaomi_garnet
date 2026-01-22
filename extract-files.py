@@ -71,6 +71,27 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .add_needed('libstagefright_foundation-v33.so'),
     (
+        'vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64',
+        'vendor/lib64/camx.device@3.4-ext-impl.so',
+        'vendor/lib64/camx.device@3.5-ext-impl.so',
+        'vendor/lib64/camx.device@3.6-ext-impl.so',
+        'vendor/lib64/camx.provider@2.4-external.so',
+        'vendor/lib64/camx.provider@2.4-impl.so',
+        'vendor/lib64/camx.provider@2.4-legacy.so',
+        'vendor/lib64/camx.provider@2.5-external.so',
+        'vendor/lib64/camx.provider@2.5-legacy.so',
+        'vendor/lib64/camx.provider@2.6-legacy.so',
+        'vendor/lib64/camx.provider@2.7-legacy.so',
+        'vendor/lib64/com.qti.feature2.anchorsync.so',
+        'vendor/lib64/libaudiocloudctrl.so',
+        'vendor/lib64/libdpps.so',
+        'vendor/lib64/libsnapdragoncolor-manager.so'
+    ): blob_fixup()
+        .replace_needed(
+            'libtinyxml2.so',
+            'libtinyxml2-v34.so'
+        ),
+    (
         'vendor/etc/camera/pureView_parameter.xml',
         'vendor/etc/camera/pureShot_parameter.xml'
     ): blob_fixup()
